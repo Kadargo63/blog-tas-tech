@@ -10,31 +10,31 @@ router.get('/', (req, res) => {
         })
 });
 
-router.get('/:id', (reg, res) => {
+router.get('/:id', (req, res) => {
     Comment.findAll({
-        where: {
-            id: req.params.id
-        }
-    })
-    .then(dbCommentData => res.json(dbCommentData))
-    .catch(err => {
-        console.log(err);
-        res.status(500).json(err);
-    })
+            where: {
+                id: req.params.id
+            }
+        })
+        .then(dbCommentData => res.json(dbCommentData))
+        .catch(err => {
+            console.log(err);
+            res.status(500).json(err);
+        })
 });
 
 router.post('/', withAuth, (req, res) => {
     if (req.session) {
         Comment.create({
-            comment_text: req.body.comment_text,
-            post_id: req.body.post_id,
-            user_id: req.session.user_id,
-        })
-        .then(dbCommentData => res.json(dbCommentData))
-        .catch(err => {
-            console.log(err);
-            res.status(400).json(err);
-        })
+                comment_text: req.body.comment_text,
+                post_id: req.body.post_id,
+                user_id: req.session.user_id,
+            })
+            .then(dbCommentData => res.json(dbCommentData))
+            .catch(err => {
+                console.log(err);
+                res.status(400).json(err);
+            })
     }
 });
 
@@ -73,5 +73,4 @@ router.delete('/:id', withAuth, (req, res) => {
         res.status(500).json(err);
     });
 });
-
 module.exports = router;
