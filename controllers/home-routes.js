@@ -42,7 +42,7 @@ router.get('/login', (req, res) => {
 });
 
 router.get('/signup', (req, res) => {
-    res.sender('signup');
+    res.render('signup');
 });
 
 router.get('/post/:id', (req, res) => {
@@ -76,7 +76,7 @@ router.get('/post/:id', (req, res) => {
         }
         const post = dbPostData.get({ plain: true });
         console.log(post);
-        res.sender('single-post', { post, loggedIn: req.session.loggedIn });
+        res.render('single-post', { post, loggedIn: req.session.loggedIn });
     })
     .catch(err => {
         console.log(err);
