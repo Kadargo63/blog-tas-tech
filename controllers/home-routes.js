@@ -71,7 +71,7 @@ router.get('/post/:id', (req, res) => {
     })
     .then(dbPostData => {
         if (!dbPostData) {
-            res.status(404).json({ message: 'Coulde not find a user with this ID' });
+            res.status(404).json({ message: 'Could not find a user with this ID' });
             return;
         }
         const post = dbPostData.get({ plain: true });
