@@ -5,6 +5,8 @@
 
   # Description
    a CMS-style blog site similar to a Wordpress site, where developers can publish their blog posts and comment on other developers’ posts as well.
+   
+   ![home](https://user-images.githubusercontent.com/88639772/145908752-8c49857a-5d44-4ec6-86bf-dcaeb7934b25.png)
 
   # Table of Contents 
   * [Installation](#-Installation)
