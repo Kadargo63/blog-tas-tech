@@ -10,8 +10,7 @@
   * [Installation](#-Installation)
   * [Usage](#-Usage)
   * [License](#-Installation)
-  * [Contributing](#-Contributing)
-  * [Tests](#-Tests)
+  * [Built With](#-Built-With)
   * [Questions](#-Contact-Information)
       
   # Installation
@@ -23,15 +22,20 @@
   # License 
   MIT
   * As this license list was not comprehensive, if you need another license, use the contact  information below to ask for license to be added. 
-  
-  # Contributing 
-  fgh
-  
-  # Tests
-  null
+
+  # Built With
+  * Javascript
+  * Node.js
+  * Express.js
+  * Sequelize
+  * JSON
+  * dotenv
+  * MySQL2
+  * InsomniaCore
+  * Handlebars.js
+  * Heroku
   
   # Contact Information 
   * GitHub Username: Kadargo63
   * Contact Email: Robertisaacs87@yahoo.com
-  
   
